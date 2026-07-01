@@ -1,6 +1,11 @@
+"use client";
+
 import { contact } from "@/data/contact";
+import { useTranslations } from "@/i18n/use-translations";
 
 export function SiteFooter() {
+  const t = useTranslations();
+
   return (
     <footer
       id="contact"
@@ -8,7 +13,7 @@ export function SiteFooter() {
     >
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <p className="text-xs font-medium uppercase tracking-wider text-zinc-500">
-          Contact
+          {t.footer.contact}
         </p>
         <div className="mt-4 flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div>

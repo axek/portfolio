@@ -1,13 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ActumPlatform } from "@/components/projects/ActumPlatform";
 import type { Project } from "@/data/projects";
+import { useTranslations } from "@/i18n/use-translations";
 
 type Props = {
   project: Project;
 };
 
 export function ActumCaseStudy({ project }: Props) {
+  const t = useTranslations();
+  const cs = t.caseStudy;
+
   return (
     <article className="flex-1">
       <section className="relative overflow-hidden border-b border-white/10 bg-[#12121a] text-white">
@@ -24,7 +30,7 @@ export function ActumCaseStudy({ project }: Props) {
             href="/#work"
             className="text-sm text-white/60 underline-offset-4 transition hover:text-white hover:underline"
           >
-            ← All projects
+            {cs.back}
           </Link>
 
           <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
@@ -55,7 +61,7 @@ export function ActumCaseStudy({ project }: Props) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-medium text-[#12121a] transition hover:bg-white/90"
               >
-                Open platform
+                {cs.openPlatform}
               </a>
               <a
                 href="https://actum.cx/"
@@ -88,7 +94,7 @@ export function ActumCaseStudy({ project }: Props) {
       <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
         <section>
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Overview
+            {cs.overview}
           </h2>
           <div className="mt-6 space-y-5">
             {project.overview.map((paragraph, i) => (
@@ -107,7 +113,7 @@ export function ActumCaseStudy({ project }: Props) {
         {project.deliverables && (
           <section className="mt-20">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-              What I shipped
+              {cs.whatShipped}
             </h2>
             <ul className="mt-8 grid gap-5 sm:grid-cols-2">
               {project.deliverables.map((item) => (
@@ -127,12 +133,10 @@ export function ActumCaseStudy({ project }: Props) {
 
         <section className="mt-20">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Design system
+            {cs.designSystem}
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Dark R&D lab aesthetic — indigo primary, violet accent, Sora and DM
-            Sans typography. Shared across the agent platform, actum.cx, and
-            sibling products in the Actum ecosystem.
+            {cs.actum.designSystemProse}
           </p>
 
           {project.brandColors && (
@@ -165,7 +169,7 @@ export function ActumCaseStudy({ project }: Props) {
                 height={73}
                 className="h-auto w-full max-w-[220px]"
               />
-              <span className="text-xs text-white/50">Wordmark · on dark</span>
+              <span className="text-xs text-white/50">{cs.actum.wordmarkDark}</span>
             </div>
             <div className="flex flex-col items-center justify-center gap-6 rounded-2xl border border-zinc-200 bg-white p-10 dark:border-zinc-800 dark:bg-zinc-900">
               <Image
@@ -175,14 +179,14 @@ export function ActumCaseStudy({ project }: Props) {
                 height={73}
                 className="h-auto w-full max-w-[220px]"
               />
-              <span className="text-xs text-zinc-500">Wordmark · on light</span>
+              <span className="text-xs text-zinc-500">{cs.actum.wordmarkLight}</span>
             </div>
           </div>
         </section>
 
         <section className="mt-20">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Highlights
+            {cs.highlights}
           </h2>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {project.highlights.map((item) => (
@@ -212,8 +216,7 @@ export function ActumCaseStudy({ project }: Props) {
             aria-hidden
           />
           <p className="mx-auto mt-6 max-w-md text-lg text-white/80">
-            Explore the project studio — create agents, workflows, and
-            orchestration in one place.
+            {cs.actum.ctaBody}
           </p>
           <a
             href={project.liveUrl}
@@ -224,7 +227,7 @@ export function ActumCaseStudy({ project }: Props) {
               background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
             }}
           >
-            Open platform ↗
+            {cs.openPlatformArrow}
           </a>
         </section>
       </div>

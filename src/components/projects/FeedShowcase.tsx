@@ -1,24 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import type { ProjectShowcaseItem } from "@/data/projects";
+import { useTranslations } from "@/i18n/use-translations";
 
 type Props = {
   items: ProjectShowcaseItem[];
 };
 
 export function FeedShowcase({ items }: Props) {
+  const t = useTranslations();
+  const cs = t.caseStudy;
+
   return (
     <section className="mt-20" aria-labelledby="feed-showcase-heading">
       <h2
         id="feed-showcase-heading"
         className="text-sm font-semibold uppercase tracking-wider text-zinc-500"
       >
-        Volunteer UX
+        {cs.volunteerUx}
       </h2>
       <p className="mt-4 max-w-3xl text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-        Coordinators work from two screens all festival long: find people in the
-        list, then open a card to plan meals. I focused on making both faster —
-        richer filters on the table, and a feeding calendar that reads arrival
-        dates at a glance.
+        {cs.feed.showcaseIntro}
       </p>
 
       <ul className="mt-10 space-y-14">

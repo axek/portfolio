@@ -1,27 +1,28 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "@/i18n/use-translations";
 
 const APP_URL = "https://app.stormy.chat/";
 const BRAIN_URL = "https://brain.stormy.chat/";
 
 export function StormyPlatform() {
+  const t = useTranslations();
+  const cs = t.caseStudy;
+  const p = t.platform.stormy;
+
   return (
     <section className="mt-20" aria-labelledby="platform-heading">
       <h2
         id="platform-heading"
         className="text-sm font-semibold uppercase tracking-wider text-zinc-500"
       >
-        The platform
+        {cs.thePlatform}
       </h2>
       <p className="mt-4 max-w-3xl text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-        Stormy is not a single screen — it is a system.{" "}
-        <strong className="font-semibold text-foreground">Stormy Brain</strong>{" "}
-        holds airline policies, entitlements, and operational playbooks.{" "}
-        <strong className="font-semibold text-foreground">Stormy App</strong>{" "}
-        turns that knowledge into live passenger conversations — calm, branded,
-        and accurate when disruption hits.
+        {p.intro}
       </p>
 
-      {/* Architecture flow */}
       <div className="mt-10 grid gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
         <a
           href={BRAIN_URL}
@@ -46,17 +47,16 @@ export function StormyPlatform() {
             </div>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Knowledge base — policies, FAQs, and operational context the agent
-            pulls from when answering passengers.
+            {p.brainDesc}
           </p>
           <span className="mt-4 inline-flex text-sm font-medium text-[#3B2468] group-hover:underline dark:text-[#c4a8ff]">
-            Open in new tab →
+            {cs.openNewTab}
           </span>
         </a>
 
         <div className="hidden flex-col items-center gap-1 px-2 sm:flex">
           <span className="text-xs font-medium uppercase tracking-wider text-zinc-400">
-            powers
+            {cs.powers}
           </span>
           <svg
             width="48"
@@ -92,16 +92,14 @@ export function StormyPlatform() {
             </div>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Passenger-facing agent — handles conversations on the channels
-            travelers already use during irregular operations.
+            {p.appDesc}
           </p>
           <span className="mt-4 inline-flex text-sm font-medium text-zinc-500">
-            Try it below ↓
+            {cs.tryBelow}
           </span>
         </div>
       </div>
 
-      {/* Live chat embed */}
       <div className="mt-12 overflow-hidden rounded-3xl border border-zinc-200 bg-[#0c0618] shadow-2xl shadow-[#3B2468]/20 dark:border-zinc-800">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-4 sm:px-6">
           <div className="flex items-center gap-3">
@@ -114,12 +112,8 @@ export function StormyPlatform() {
               aria-hidden
             />
             <div>
-              <p className="text-sm font-semibold text-white">
-                Talk to Stormy
-              </p>
-              <p className="text-xs text-white/50">
-                Live demo · app.stormy.chat
-              </p>
+              <p className="text-sm font-semibold text-white">{cs.talkToStormy}</p>
+              <p className="text-xs text-white/50">{cs.liveDemoApp}</p>
             </div>
           </div>
           <a
@@ -128,13 +122,13 @@ export function StormyPlatform() {
             rel="noopener noreferrer"
             className="text-xs text-white/60 underline-offset-4 hover:text-white hover:underline"
           >
-            Open full screen ↗
+            {cs.openFullScreen}
           </a>
         </div>
         <div className="relative min-h-[520px] w-full sm:min-h-[600px] lg:min-h-[680px]">
           <iframe
             src={APP_URL}
-            title="Stormy — passenger AI agent"
+            title={p.iframeTitle}
             className="absolute inset-0 h-full w-full border-0 bg-[#0c0618]"
             allow="clipboard-read; clipboard-write; microphone"
             loading="lazy"
@@ -142,7 +136,6 @@ export function StormyPlatform() {
         </div>
       </div>
 
-      {/* Brain CTA */}
       <div
         className="mt-6 flex flex-col gap-6 rounded-3xl border border-[#3B2468]/20 p-8 sm:flex-row sm:items-center sm:justify-between"
         style={{
@@ -152,16 +145,11 @@ export function StormyPlatform() {
       >
         <div className="max-w-xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-[#3B2468] dark:text-[#c4a8ff]">
-            Knowledge layer
+            {cs.knowledgeLayer}
           </p>
-          <h3 className="mt-2 text-xl font-semibold text-foreground">
-            Stormy Brain
-          </h3>
+          <h3 className="mt-2 text-xl font-semibold text-foreground">Stormy Brain</h3>
           <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Browse the knowledge base Stormy uses to stay accurate — airline
-            policies, entitlement rules, disruption playbooks, and approved
-            messaging. Every answer in the chat above is grounded in what lives
-            here.
+            {p.brainCtaBody}
           </p>
         </div>
         <a
@@ -173,7 +161,7 @@ export function StormyPlatform() {
             background: "linear-gradient(135deg, #3B2468, #FF2F2E)",
           }}
         >
-          Open brain.stormy.chat ↗
+          {cs.openBrain}
         </a>
       </div>
     </section>

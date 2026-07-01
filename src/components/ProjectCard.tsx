@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import type { Project } from "@/data/projects";
+import { useTranslations } from "@/i18n/use-translations";
 
 type Props = {
   project: Project;
@@ -22,6 +25,7 @@ const linkAccent: Record<string, string> = {
 };
 
 export function ProjectCard({ project, compact = false }: Props) {
+  const t = useTranslations();
   const theme = project.theme ?? "default";
   const isBranded =
     theme === "stormy" ||
@@ -199,7 +203,7 @@ export function ProjectCard({ project, compact = false }: Props) {
               isBranded ? linkAccent[theme] : "text-zinc-500 group-hover:text-foreground",
             ].join(" ")}
           >
-            View case study →
+            {t.card.viewCaseStudy}
           </span>
         )}
       </div>

@@ -1,66 +1,37 @@
+"use client";
+
 const PLATFORM_URL = "https://glmvp.vercel.app/";
 const BRAND_URL = "https://actum.cx/";
 
-const pillars = [
-  {
-    id: "agents",
-    label: "AI Agents",
-    title: "Conversational agents",
-    description:
-      "LLM-powered assistants for support, sales, content, code, and domain-specific tasks — configured and published from a single studio.",
-    examples: ["Customer Support", "Medical Assistant", "Sales Qualifier", "Voice AI"],
-  },
-  {
-    id: "workflows",
-    label: "Workflows",
-    title: "Process automation",
-    description:
-      "Multi-step flows with rules, routing, and integrations — lead scoring, document processing, HR onboarding, and more.",
-    examples: ["Lead Scoring", "Document Processing", "HR Assistant", "Journey Mapper"],
-  },
-  {
-    id: "orchestration",
-    label: "Orchestration",
-    title: "Agents + workflows together",
-    description:
-      "Combine workflow bots and AI agents in one project — unified publishing, error states, and production orchestration.",
-    examples: ["Orchestration Demo", "Multi-agent flows", "FSM + LLM", "Publish pipeline"],
-  },
-];
+import { useTranslations } from "@/i18n/use-translations";
 
 export function ActumPlatform() {
+  const t = useTranslations();
+  const cs = t.caseStudy;
+  const p = t.platform.actum;
+
   return (
     <section className="mt-20" aria-labelledby="actum-platform-heading">
       <h2
         id="actum-platform-heading"
         className="text-sm font-semibold uppercase tracking-wider text-zinc-500"
       >
-        The platform
+        {cs.thePlatform}
       </h2>
       <p className="mt-4 max-w-3xl text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-        Actum is the company&apos;s core product — a studio for building,
-        orchestrating, and shipping AI agents. Three building blocks work
-        together:{" "}
-        <strong className="font-semibold text-foreground">AI Agents</strong> for
-        conversation,{" "}
-        <strong className="font-semibold text-foreground">Workflows</strong>{" "}
-        for structured automation, and{" "}
-        <strong className="font-semibold text-foreground">Orchestration</strong>{" "}
-        to run them as one system.
+        {p.intro}
       </p>
 
       <ul className="mt-10 grid gap-5 lg:grid-cols-3">
-        {pillars.map((pillar) => (
+        {p.pillars.map((pillar) => (
           <li
-            key={pillar.id}
+            key={pillar.label}
             className="rounded-2xl border border-zinc-200 bg-white p-6 dark:border-zinc-800 dark:bg-zinc-900"
           >
             <span className="inline-flex rounded-full bg-[#6366f1]/10 px-2.5 py-0.5 text-xs font-medium text-[#6366f1] dark:text-[#a5b4fc]">
               {pillar.label}
             </span>
-            <h3 className="mt-3 font-semibold text-foreground">
-              {pillar.title}
-            </h3>
+            <h3 className="mt-3 font-semibold text-foreground">{pillar.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
               {pillar.description}
             </p>
@@ -81,8 +52,8 @@ export function ActumPlatform() {
       <div className="mt-12 overflow-hidden rounded-3xl border border-zinc-200 bg-[#12121a] shadow-2xl shadow-[#6366f1]/10 dark:border-zinc-800">
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-4 sm:px-6">
           <div>
-            <p className="text-sm font-semibold text-white">Live platform</p>
-            <p className="text-xs text-white/50">Project studio · demo environment</p>
+            <p className="text-sm font-semibold text-white">{cs.livePlatform}</p>
+            <p className="text-xs text-white/50">{cs.projectStudio}</p>
           </div>
           <a
             href={PLATFORM_URL}
@@ -90,13 +61,13 @@ export function ActumPlatform() {
             rel="noopener noreferrer"
             className="text-xs text-white/60 underline-offset-4 hover:text-white hover:underline"
           >
-            Open full screen ↗
+            {cs.openFullScreen}
           </a>
         </div>
         <div className="relative min-h-[520px] w-full sm:min-h-[600px] lg:min-h-[680px]">
           <iframe
             src={PLATFORM_URL}
-            title="Actum — AI agent platform"
+            title={p.iframeTitle}
             className="absolute inset-0 h-full w-full border-0 bg-[#12121a]"
             allow="clipboard-read; clipboard-write"
             loading="lazy"
@@ -113,15 +84,11 @@ export function ActumPlatform() {
       >
         <div className="max-w-xl">
           <p className="text-sm font-semibold uppercase tracking-wider text-[#6366f1] dark:text-[#a5b4fc]">
-            Brand & company
+            {p.brandEyebrow}
           </p>
-          <h3 className="mt-2 text-xl font-semibold text-foreground">
-            actum.cx
-          </h3>
+          <h3 className="mt-2 text-xl font-semibold text-foreground">actum.cx</h3>
           <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-            The public face of Actum — R&D laboratory in conversational and
-            agentic AI. The platform powers case studies across fintech, healthcare,
-            aviation, and enterprise deployments.
+            {p.companySiteBody}
           </p>
         </div>
         <a
@@ -133,7 +100,7 @@ export function ActumPlatform() {
             background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
           }}
         >
-          Visit actum.cx ↗
+          {p.visitActum}
         </a>
       </div>
     </section>

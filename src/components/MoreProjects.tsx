@@ -1,12 +1,20 @@
+"use client";
+
 import { ProjectCard } from "@/components/ProjectCard";
-import { projects } from "@/data/projects";
+import { getProjects } from "@/data/projects";
+import { useLanguage } from "@/i18n/LanguageProvider";
+import { useTranslations } from "@/i18n/use-translations";
 
 type Props = {
   currentSlug: string;
 };
 
 export function MoreProjects({ currentSlug }: Props) {
-  const others = projects.filter((project) => project.slug !== currentSlug);
+  const { locale } = useLanguage();
+  const t = useTranslations();
+  const others = getProjects(locale).filter(
+    (project) => project.slug !== currentSlug,
+  );
 
   if (others.length === 0) {
     return null;
@@ -22,7 +30,7 @@ export function MoreProjects({ currentSlug }: Props) {
           id="more-projects-heading"
           className="text-sm font-semibold uppercase tracking-wider text-zinc-500"
         >
-          More projects
+          {t.moreProjects.title}
         </h2>
         <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {others.map((project) => (

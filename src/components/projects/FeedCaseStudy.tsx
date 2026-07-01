@@ -1,13 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { FeedShowcase } from "@/components/projects/FeedShowcase";
 import type { Project } from "@/data/projects";
+import { useTranslations } from "@/i18n/use-translations";
 
 type Props = {
   project: Project;
 };
 
 export function FeedCaseStudy({ project }: Props) {
+  const t = useTranslations();
+  const cs = t.caseStudy;
+
   return (
     <article className="flex-1">
       <section className="relative overflow-hidden border-b border-white/10 bg-[#041428] text-white">
@@ -24,7 +30,7 @@ export function FeedCaseStudy({ project }: Props) {
             href="/#work"
             className="text-sm text-white/60 underline-offset-4 transition hover:text-white hover:underline"
           >
-            ← All projects
+            {cs.back}
           </Link>
 
           <div className="mt-10 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
@@ -46,7 +52,7 @@ export function FeedCaseStudy({ project }: Props) {
                     {project.title}
                   </h1>
                   <p className="mt-1 text-sm text-white/60">
-                    Volunteer & meal operations
+                    {cs.feed.subtitle}
                   </p>
                 </div>
               </div>
@@ -63,7 +69,7 @@ export function FeedCaseStudy({ project }: Props) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-medium text-[#041428] transition hover:bg-white/90"
               >
-                Open stage admin
+                {cs.openStage}
               </a>
             </div>
           </div>
@@ -88,7 +94,7 @@ export function FeedCaseStudy({ project }: Props) {
       <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
         <section>
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Overview
+            {cs.overview}
           </h2>
           <div className="mt-6 space-y-5">
             {project.overview.map((paragraph, i) => (
@@ -107,7 +113,7 @@ export function FeedCaseStudy({ project }: Props) {
         {project.deliverables && (
           <section className="mt-20">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-              What I worked on
+              {cs.whatWorkedOn}
             </h2>
             <ul className="mt-8 grid gap-5 sm:grid-cols-2">
               {project.deliverables.map((item) => (
@@ -127,13 +133,10 @@ export function FeedCaseStudy({ project }: Props) {
 
         <section className="mt-20">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Stack
+            {cs.stack}
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-            React + Refine + Ant Design on the front, Django REST API on the
-            back. Monorepo with shared packages, Playwright regression tests,
-            and Docker-based local dev — built for a volunteer org running a
-            multi-day outdoor festival.
+            {cs.feed.stackProse}
           </p>
 
           {project.brandColors && (
@@ -160,7 +163,7 @@ export function FeedCaseStudy({ project }: Props) {
 
         <section className="mt-20">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Highlights
+            {cs.highlights}
           </h2>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {project.highlights.map((item) => (
@@ -185,8 +188,7 @@ export function FeedCaseStudy({ project }: Props) {
             aria-hidden
           />
           <p className="mx-auto mt-6 max-w-md text-lg text-white/80">
-            Stage admin for Insomnia coordinators — volunteers, feeding, and
-            transactions behind festival login.
+            {cs.feed.ctaBody}
           </p>
           <a
             href={project.liveUrl}
@@ -194,7 +196,7 @@ export function FeedCaseStudy({ project }: Props) {
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-medium text-[#041428] transition hover:bg-white/90"
           >
-            Open stage admin ↗
+            {cs.openStageArrow}
           </a>
         </section>
       </div>

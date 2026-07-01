@@ -1,13 +1,19 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { SolantDemo } from "@/components/projects/SolantDemo";
 import type { Project } from "@/data/projects";
+import { useTranslations } from "@/i18n/use-translations";
 
 type Props = {
   project: Project;
 };
 
 export function SolantCaseStudy({ project }: Props) {
+  const t = useTranslations();
+  const cs = t.caseStudy;
+
   return (
     <article className="flex-1">
       <section className="relative overflow-hidden border-b border-[#E0D8CB] bg-[#F7F5F1] text-[#1B1714] dark:border-zinc-800 dark:bg-[#1B1714] dark:text-[#F7F5F1]">
@@ -35,7 +41,7 @@ export function SolantCaseStudy({ project }: Props) {
             href="/#work"
             className="text-sm text-white/70 underline-offset-4 transition hover:text-white hover:underline"
           >
-            ← All projects
+            {cs.back}
           </Link>
 
           {project.badge && (
@@ -63,7 +69,7 @@ export function SolantCaseStudy({ project }: Props) {
                 </span>
               </div>
               <p className="mt-2 text-base font-medium text-white/85">
-                Clarity in acts
+                {cs.solant.tagline}
               </p>
               <p className="mt-6 text-xl leading-relaxed text-white/90 sm:text-2xl">
                 {project.tagline}
@@ -78,7 +84,7 @@ export function SolantCaseStudy({ project }: Props) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-medium text-[#1B1714] transition hover:bg-white/90"
               >
-                Open live demo
+                {cs.openDemo}
               </a>
             </div>
           </div>
@@ -103,7 +109,7 @@ export function SolantCaseStudy({ project }: Props) {
       <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20">
         <section>
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Overview
+            {cs.overview}
           </h2>
           <div className="mt-6 space-y-5">
             {project.overview.map((paragraph, i) => (
@@ -122,7 +128,7 @@ export function SolantCaseStudy({ project }: Props) {
         {project.deliverables && (
           <section className="mt-20">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-              What I shipped
+              {cs.whatShipped}
             </h2>
             <ul className="mt-8 grid gap-5 sm:grid-cols-2">
               {project.deliverables.map((item) => (
@@ -142,12 +148,10 @@ export function SolantCaseStudy({ project }: Props) {
 
         <section className="mt-20">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Design language
+            {cs.designLanguage}
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-            Warm cream canvas, amber &ldquo;sunlight through blinds&rdquo; hero,
-            and the eight-ray starburst mark — calm, executive, and tactile. Built
-            with React Native Web + Expo for a mobile-first chat shell.
+            {cs.solant.designLanguageProse}
           </p>
 
           {project.brandColors && (
@@ -174,7 +178,7 @@ export function SolantCaseStudy({ project }: Props) {
 
         <section className="mt-20">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-zinc-500">
-            Highlights
+            {cs.highlights}
           </h2>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
             {project.highlights.map((item) => (
@@ -206,8 +210,7 @@ export function SolantCaseStudy({ project }: Props) {
             aria-hidden
           />
           <p className="mx-auto mt-6 max-w-md text-lg text-white/90">
-            Tap the chips, draft a reply, approve a send — the full flow is
-            interactive in the embed above.
+            {cs.solant.ctaEmbed}
           </p>
           <a
             href={project.liveUrl}
@@ -215,7 +218,7 @@ export function SolantCaseStudy({ project }: Props) {
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-medium text-[#1B1714] transition hover:bg-white/90"
           >
-            Open live demo ↗
+            {cs.openDemoArrow}
           </a>
         </section>
       </div>
