@@ -16,6 +16,9 @@ export function SiteHeader() {
           <Link href="/#work" className="hover:text-foreground">
             Work
           </Link>
+          <Link href="/#pricing" className="hover:text-foreground">
+            Pricing
+          </Link>
           <Link href="/#contact" className="hover:text-foreground">
             Contact
           </Link>

@@ -1,4 +1,7 @@
+import Link from "next/link";
+import { PricingSection } from "@/components/PricingSection";
 import { ProjectCard } from "@/components/ProjectCard";
+import { contact } from "@/data/contact";
 import { projects } from "@/data/projects";
 
 export default function Home() {
@@ -16,6 +19,20 @@ export default function Home() {
             Each project opens a detailed view with previews, copy, and a link
             to the live product.
           </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href={`mailto:${contact.email}?subject=Project%20inquiry`}
+              className="inline-flex items-center justify-center rounded-full bg-foreground px-7 py-3 text-sm font-medium text-background transition hover:opacity-90"
+            >
+              Get in touch
+            </a>
+            <Link
+              href="/#work"
+              className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white px-7 py-3 text-sm font-medium text-foreground transition hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-zinc-600"
+            >
+              View work
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -29,6 +46,8 @@ export default function Home() {
           ))}
         </ul>
       </section>
+
+      <PricingSection />
     </div>
   );
 }
