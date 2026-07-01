@@ -1,10 +1,9 @@
 const contact = {
-  name: "Your Name",
-  email: "hello@example.com",
+  name: "axek designs",
+  email: "axek@ya.ru",
   links: [
-    { label: "GitHub", href: "https://github.com/yourusername" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/yourprofile" },
-    { label: "Bluesky", href: "https://bsky.app/profile/yourhandle" },
+    { label: "GitHub", href: "https://github.com/axek" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/axekefremov/" },
   ],
 };
 

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" role="img" aria-label="Solant mark">
+  <path fill="#E8821E" d="M50 50 L45.6 45.6 L50 4 L54.4 45.6 Z" transform="rotate(0 50 50)"/>
+  <path fill="#E8821E" d="M50 50 L45.6 45.6 L50 10 L54.4 45.6 Z" transform="rotate(45 50 50)"/>
+  <path fill="#E8821E" d="M50 50 L45.6 45.6 L50 4 L54.4 45.6 Z" transform="rotate(90 50 50)"/>
+  <path fill="#E8821E" d="M50 50 L45.6 45.6 L50 10 L54.4 45.6 Z" transform="rotate(135 50 50)"/>
+  <path fill="#E8821E" d="M50 50 L45.6 45.6 L50 4 L54.4 45.6 Z" transform="rotate(180 50 50)"/>
+  <path fill="#E8821E" d="M50 50 L45.6 45.6 L50 10 L54.4 45.6 Z" transform="rotate(225 50 50)"/>
+  <path fill="#E8821E" d="M50 50 L45.6 45.6 L50 4 L54.4 45.6 Z" transform="rotate(270 50 50)"/>
+  <path fill="#E8821E" d="M50 50 L45.6 45.6 L50 10 L54.4 45.6 Z" transform="rotate(315 50 50)"/>
+</svg>

@@ -21,7 +21,7 @@ export default function Home() {
 
       <section id="work" className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
         <h2 className="sr-only">Project list</h2>
-        <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-2">
           {projects.map((project) => (
             <li key={project.slug}>
               <ProjectCard project={project} />

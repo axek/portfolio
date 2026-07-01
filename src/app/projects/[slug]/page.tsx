@@ -2,6 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { ActumCaseStudy } from "@/components/projects/ActumCaseStudy";
+import { FeedCaseStudy } from "@/components/projects/FeedCaseStudy";
+import { SolantCaseStudy } from "@/components/projects/SolantCaseStudy";
+import { StormyCaseStudy } from "@/components/projects/StormyCaseStudy";
 import { getAllProjectSlugs, getProjectBySlug } from "@/data/projects";
 
 type Props = {
@@ -24,13 +28,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
-  const project = getProjectBySlug(slug);
-  if (!project) {
-    notFound();
-  }
-
+function DefaultCaseStudy({
+  project,
+}: {
+  project: NonNullable<ReturnType<typeof getProjectBySlug>>;
+}) {
   return (
     <article className="flex-1">
       <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
@@ -131,4 +133,30 @@ export default async function ProjectPage({ params }: Props) {
       </div>
     </article>
   );
+}
+
+export default async function ProjectPage({ params }: Props) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+  if (!project) {
+    notFound();
+  }
+
+  if (project.theme === "stormy") {
+    return <StormyCaseStudy project={project} />;
+  }
+
+  if (project.theme === "actum") {
+    return <ActumCaseStudy project={project} />;
+  }
+
+  if (project.theme === "solant") {
+    return <SolantCaseStudy project={project} />;
+  }
+
+  if (project.theme === "feed") {
+    return <FeedCaseStudy project={project} />;
+  }
+
+  return <DefaultCaseStudy project={project} />;
 }

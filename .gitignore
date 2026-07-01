@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# source brand assets (optimized copies live in public/projects/)
+/Assets/
+
 # local / agent docs — do not publish to remote
 *.md
 
