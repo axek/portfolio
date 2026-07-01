@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { MoreProjects } from "@/components/MoreProjects";
 import { ActumCaseStudy } from "@/components/projects/ActumCaseStudy";
 import { FeedCaseStudy } from "@/components/projects/FeedCaseStudy";
 import { SolantCaseStudy } from "@/components/projects/SolantCaseStudy";
@@ -143,20 +144,45 @@ export default async function ProjectPage({ params }: Props) {
   }
 
   if (project.theme === "stormy") {
-    return <StormyCaseStudy project={project} />;
+    return (
+      <>
+        <StormyCaseStudy project={project} />
+        <MoreProjects currentSlug={slug} />
+      </>
+    );
   }
 
   if (project.theme === "actum") {
-    return <ActumCaseStudy project={project} />;
+    return (
+      <>
+        <ActumCaseStudy project={project} />
+        <MoreProjects currentSlug={slug} />
+      </>
+    );
   }
 
   if (project.theme === "solant") {
-    return <SolantCaseStudy project={project} />;
+    return (
+      <>
+        <SolantCaseStudy project={project} />
+        <MoreProjects currentSlug={slug} />
+      </>
+    );
   }
 
   if (project.theme === "feed") {
-    return <FeedCaseStudy project={project} />;
+    return (
+      <>
+        <FeedCaseStudy project={project} />
+        <MoreProjects currentSlug={slug} />
+      </>
+    );
   }
 
-  return <DefaultCaseStudy project={project} />;
+  return (
+    <>
+      <DefaultCaseStudy project={project} />
+      <MoreProjects currentSlug={slug} />
+    </>
+  );
 }

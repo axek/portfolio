@@ -16,10 +16,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Portfolio",
-    template: "%s — Portfolio",
+    default: "axek designs",
+    template: "%s — axek designs",
   },
   description: "Project portfolio with case studies and live product links.",
+  icons: {
+    icon: "/axek-logo.png",
+    apple: "/axek-logo.png",
+  },
 };
 
 export default function RootLayout({
