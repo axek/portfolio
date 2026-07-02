@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const PLATFORM_URL = "https://glmvp.vercel.app/";
 const BRAND_URL = "https://actum.cx/";
 
@@ -64,7 +66,29 @@ export function ActumPlatform() {
             {cs.openFullScreen}
           </a>
         </div>
-        <div className="relative min-h-[520px] w-full sm:min-h-[600px] lg:min-h-[680px]">
+
+        <div className="md:hidden">
+          <p className="border-b border-white/10 px-5 py-3 text-sm leading-relaxed text-white/70 sm:px-6">
+            {p.mobilePreviewNote}
+          </p>
+          <a
+            href={PLATFORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Image
+              src="/projects/actum/platform-preview.png"
+              alt={p.previewAlt}
+              width={3840}
+              height={2160}
+              className="h-auto w-full"
+              sizes="100vw"
+            />
+          </a>
+        </div>
+
+        <div className="relative hidden min-h-[520px] w-full md:block lg:min-h-[680px]">
           <iframe
             src={PLATFORM_URL}
             title={p.iframeTitle}

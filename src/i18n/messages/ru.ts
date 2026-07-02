@@ -6,8 +6,10 @@ export const ru: typeof en = {
   },
   nav: {
     work: "Работы",
+    background: "Бэкграунд",
     pricing: "Цены",
     contact: "Контакты",
+    mobileAria: "Разделы сайта",
     homeAria: "axek designs — главная",
   },
   lang: {
@@ -274,6 +276,9 @@ export const ru: typeof en = {
       companyBody:
         "Международная лаборатория в области разговорного и агентного AI. Платформа — и для клиентов, и для своих экспериментов.",
       iframeTitle: "Actum — платформа AI-агентов",
+      mobilePreviewNote:
+        "Лучше смотреть с десктопа — на телефоне живое демо неудобное. Ниже превью, можно открыть на весь экран.",
+      previewAlt: "Actum — студия проектов",
       companySiteBody:
         "Сайт компании — actum.cx. Там же кейсы: fintech, медицина, авиация, крупные корпоративные внедрения.",
       brandEyebrow: "Компания",

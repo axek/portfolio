@@ -79,7 +79,7 @@ export function BackgroundSection() {
   const t = useTranslations();
 
   return (
-    <section className="border-y border-zinc-200 bg-zinc-50/70 dark:border-zinc-800 dark:bg-zinc-950/60">
+    <section id="background" className="border-y border-zinc-200 bg-zinc-50/70 dark:border-zinc-800 dark:bg-zinc-950/60">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
         <div className="max-w-2xl">
           <p className="text-sm font-medium uppercase tracking-wider text-zinc-500">

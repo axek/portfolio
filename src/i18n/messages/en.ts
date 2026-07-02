@@ -4,8 +4,10 @@ export const en = {
   },
   nav: {
     work: "Work",
+    background: "Background",
     pricing: "Pricing",
     contact: "Contact",
+    mobileAria: "Site sections",
     homeAria: "axek designs — home",
   },
   lang: {
@@ -280,6 +282,9 @@ export const en = {
       brandEyebrow: "Brand & company",
       visitActum: "Visit actum.cx ↗",
       iframeTitle: "Actum — AI agent platform",
+      mobilePreviewNote:
+        "Best on desktop — the live demo is cramped on a phone. Here’s a preview; tap to open full screen.",
+      previewAlt: "Actum platform — project studio",
       pillars: [
         {
           label: "Agents",
