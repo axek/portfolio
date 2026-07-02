@@ -17,13 +17,139 @@ export const ru: typeof en = {
   },
   home: {
     eyebrow: "Избранное",
-    title: "Проекты и интерфейсы, которые я делал.",
+    title: "Проекты, продукты и интерфейсы, доставленные клиентам за последние полгода.",
     subtitle:
       "У каждого проекта — своя страница: что это, как выглядит и где посмотреть вживую.",
     ctaPrimary: "Написать",
     ctaSecondary: "Смотреть работы",
     projectsSrOnly: "Список проектов",
     mailtoSubject: "Проект",
+  },
+  background: {
+    eyebrow: "Бэкграунд",
+    title: "Что я делал до недавних клиентских проектов.",
+    chapters: [
+      {
+        id: "poap",
+        period: "Web3",
+        title: "Арт для POAP",
+        body:
+          "Прежде чем начать вайбкодить продукты и интерфейсы, я рисовал POAP — цифровые бейджи для событий и комьюнити. Мои работы использовали ENS, Ethereum Foundation, Devcon и другие блокчейн-команды.",
+        href: "https://collections.poap.xyz/artists/aexek.eth",
+        cta: "Открыть коллекцию POAP ↗",
+        layout: "circular",
+        images: [
+          {
+            src: "/background/poap/devcon-vi.webp",
+            brand: "Devcon",
+            alt: "POAP для спикера Devcon VI",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/141623",
+          },
+          {
+            src: "/background/poap/ens-dao-nyc.webp",
+            brand: "ENS",
+            alt: "POAP ENS DAO Happy Hour в Нью-Йорке",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/51988",
+          },
+          {
+            src: "/background/poap/ens-anniversary.webp",
+            brand: "ENS",
+            alt: "POAP к 6-летию ENS",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/124819",
+          },
+          {
+            src: "/background/poap/devconnect-quest.webp",
+            brand: "Devconnect",
+            alt: "POAP Lil Quest Devconnect",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/214188",
+          },
+          {
+            src: "/background/poap/ens-town-hall.webp",
+            brand: "ENS",
+            alt: "POAP ENS Town Hall Q3 2022",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/80977",
+          },
+          {
+            src: "/background/poap/ethcc-speaker.webp",
+            brand: "EthCC",
+            alt: "POAP для спикера EthCC",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/141717",
+          },
+        ],
+      },
+      {
+        id: "winding-tree",
+        period: "3 года · главный дизайнер",
+        title: "Winding Tree",
+        body:
+          "До этого три года был главным дизайнером всех продуктов Winding Tree — Glider, ORGiD, win.so и десятки других инструментов. Компания потом закрылась, но все проекты можно посмотреть на GitHub.",
+        href: "https://github.com/windingtree",
+        cta: "Winding Tree на GitHub ↗",
+        layout: "grid",
+        images: [
+          {
+            src: "/background/winding-tree/glider.jpg",
+            alt: "Интерфейс travel-платформы Glider",
+          },
+          {
+            src: "/background/winding-tree/website.jpg",
+            alt: "Сайт Winding Tree",
+          },
+          {
+            src: "/background/winding-tree/brand.png",
+            alt: "Фирменный стиль Winding Tree",
+          },
+        ],
+      },
+      {
+        id: "valamis",
+        period: "3 года · продуктовый дизайнер",
+        title: "Valamis",
+        body:
+          "Продуктовый дизайнер в Valamis — enterprise-платформа для корпоративного обучения. Интерфейсы, сценарии и дизайн-системы для сложного B2B-софта.",
+        href: "https://www.valamis.com",
+        cta: "valamis.com ↗",
+        layout: "grid",
+        images: [
+          {
+            src: "/background/valamis/platform.png",
+            alt: "Платформа Valamis",
+          },
+          {
+            src: "/background/valamis/mobile.png",
+            alt: "Мобильный интерфейс Valamis",
+          },
+          {
+            src: "/background/valamis/brand.png",
+            alt: "Бренд Valamis",
+          },
+        ],
+      },
+      {
+        id: "graphic",
+        period: "Много лет",
+        title: "Графический дизайн",
+        body:
+          "Ещё раньше много лет занимался графическим дизайном — печать, брендинг, типографика, айдентика. Портфолио тех времён до сих пор на Behance.",
+        href: "https://www.behance.net/axek",
+        cta: "Портфолио на Behance ↗",
+        layout: "grid",
+        images: [
+          {
+            src: "/background/behance/villa-vitele.png",
+            alt: "Проект Villa Vitele",
+          },
+          {
+            src: "/background/behance/custom-lettering.jpg",
+            alt: "Кастомная леттеринг-работа",
+          },
+          {
+            src: "/background/behance/posters.jpg",
+            alt: "Постеры Internet-free Day",
+          },
+        ],
+      },
+    ],
   },
   pricing: {
     eyebrow: "Цены",

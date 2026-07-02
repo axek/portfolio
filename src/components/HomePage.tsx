@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { BackgroundSection } from "@/components/BackgroundSection";
 import { PricingSection } from "@/components/PricingSection";
 import { ProjectCard } from "@/components/ProjectCard";
 import { contact } from "@/data/contact";
@@ -53,6 +54,8 @@ export function HomePage() {
           ))}
         </ul>
       </section>
+
+      <BackgroundSection />
 
       <PricingSection />
     </div>

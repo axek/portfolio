@@ -23,6 +23,132 @@ export const en = {
     projectsSrOnly: "Project list",
     mailtoSubject: "Project inquiry",
   },
+  background: {
+    eyebrow: "Background",
+    title: "What I did before the recent client work.",
+    chapters: [
+      {
+        id: "poap",
+        period: "Web3",
+        title: "POAP art",
+        body:
+          "Before I started vibe coding interfaces for clients, I drew POAPs — digital badges for events and communities. My work was used by ENS, Ethereum Foundation, Devcon, and other blockchain teams.",
+        href: "https://collections.poap.xyz/artists/aexek.eth",
+        cta: "Open POAP collection ↗",
+        layout: "circular",
+        images: [
+          {
+            src: "/background/poap/devcon-vi.webp",
+            brand: "Devcon",
+            alt: "Devcon VI speaker POAP",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/141623",
+          },
+          {
+            src: "/background/poap/ens-dao-nyc.webp",
+            brand: "ENS",
+            alt: "ENS DAO Happy Hour in NYC POAP",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/51988",
+          },
+          {
+            src: "/background/poap/ens-anniversary.webp",
+            brand: "ENS",
+            alt: "ENS 6th Anniversary POAP",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/124819",
+          },
+          {
+            src: "/background/poap/devconnect-quest.webp",
+            brand: "Devconnect",
+            alt: "Lil Quest Devconnect POAP",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/214188",
+          },
+          {
+            src: "/background/poap/ens-town-hall.webp",
+            brand: "ENS",
+            alt: "ENS Town Hall Q3 2022 POAP",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/80977",
+          },
+          {
+            src: "/background/poap/ethcc-speaker.webp",
+            brand: "EthCC",
+            alt: "EthCC speaker POAP",
+            href: "https://collections.poap.xyz/artists/aexek.eth/drops/141717",
+          },
+        ],
+      },
+      {
+        id: "winding-tree",
+        period: "3 years · lead designer",
+        title: "Winding Tree",
+        body:
+          "Before that I was lead designer across the whole Winding Tree product line — Glider, ORGiD, win.so, and dozens of other tools. The company has since shut down, but you can still browse everything on GitHub.",
+        href: "https://github.com/windingtree",
+        cta: "Winding Tree on GitHub ↗",
+        layout: "grid",
+        images: [
+          {
+            src: "/background/winding-tree/glider.jpg",
+            alt: "Glider travel platform interface",
+          },
+          {
+            src: "/background/winding-tree/website.jpg",
+            alt: "Winding Tree website",
+          },
+          {
+            src: "/background/winding-tree/brand.png",
+            alt: "Winding Tree brand identity",
+          },
+        ],
+      },
+      {
+        id: "valamis",
+        period: "3 years · product designer",
+        title: "Valamis",
+        body:
+          "Product designer at Valamis — an enterprise learning platform for large companies. Interfaces, product flows, and design systems for complex B2B software.",
+        href: "https://www.valamis.com",
+        cta: "valamis.com ↗",
+        layout: "grid",
+        images: [
+          {
+            src: "/background/valamis/platform.png",
+            alt: "Valamis learning platform",
+          },
+          {
+            src: "/background/valamis/mobile.png",
+            alt: "Valamis mobile experience",
+          },
+          {
+            src: "/background/valamis/brand.png",
+            alt: "Valamis brand",
+          },
+        ],
+      },
+      {
+        id: "graphic",
+        period: "Many years",
+        title: "Graphic design",
+        body:
+          "Before product work I spent years in graphic design — print, branding, typography, and visual identity. My portfolio from that era is still on Behance.",
+        href: "https://www.behance.net/axek",
+        cta: "Behance portfolio ↗",
+        layout: "grid",
+        images: [
+          {
+            src: "/background/behance/villa-vitele.png",
+            alt: "Villa Vitele branding project",
+          },
+          {
+            src: "/background/behance/custom-lettering.jpg",
+            alt: "Custom lettering work",
+          },
+          {
+            src: "/background/behance/posters.jpg",
+            alt: "Internet-free Day posters",
+          },
+        ],
+      },
+    ],
+  },
   pricing: {
     eyebrow: "Pricing",
     title: "Flexible ways to work together",
