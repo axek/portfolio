@@ -243,18 +243,17 @@ export const projectsEn: Project[] = [
   },
   {
     slug: "feed",
-    title: "Feed",
+    title: "Feeder",
     tagline: "Volunteer management and meal operations for Insomnia Festival.",
     summary:
       "Admin panel and field scanner for thousands of volunteers — arrivals, feeding, QR check-in, and logistics. React + Refine + Django monorepo.",
     cover: {
       src: "/projects/feed/cover.svg",
-      alt: "Feed — dark navy Insomnia festival cover",
+      alt: "Feeder — dark navy Insomnia festival cover",
       width: 1200,
       height: 750,
     },
     gallery: [],
-    liveUrl: "https://feedapp-dev.insomniafest.ru/",
     year: "2024–2025",
     role: "Frontend development & UX",
     client: "Insomnia Festival",
@@ -266,7 +265,7 @@ export const projectsEn: Project[] = [
           "Composable filters for directions, arrival status, feeding dates, and transport — with column picker, export, and 1,200+ volunteers in one view.",
         image: {
           src: "/projects/feed/volunteers-table.png",
-          alt: "Feed admin — volunteer list with filter panel and status badges",
+          alt: "Feeder admin — volunteer list with filter panel and status badges",
           width: 1440,
           height: 900,
         },
@@ -277,7 +276,7 @@ export const projectsEn: Project[] = [
           "Profile card ties arrivals to an interactive summer feeding calendar — kitchen, diet flags, and paid/free dates in one place.",
         image: {
           src: "/projects/feed/volunteer-card-calendar.png",
-          alt: "Feed admin — volunteer edit form with arrival dates and feeding calendar",
+          alt: "Feeder admin — volunteer edit form with arrival dates and feeding calendar",
           width: 1440,
           height: 900,
         },
@@ -320,7 +319,7 @@ export const projectsEn: Project[] = [
       },
     ],
     overview: [
-      "Feed is the operational backbone of Insomnia Festival’s volunteer program: who is on site, what they eat, when they arrive, and how kitchens log every meal. Two apps share one API — an admin for coordinators and a scanner for the field.",
+      "Feeder is the operational backbone of Insomnia Festival’s volunteer program: who is on site, what they eat, when they arrive, and how kitchens log every meal. Two apps share one API — an admin for coordinators and a scanner for the field.",
       "The admin is built with React, Refine, and Ant Design on top of a Django backend. Volunteers get a rich card UI with an interactive summer feeding calendar, arrival statuses, QR badges, and fine-grained permissions. Transactions, storage, statistics, and sync round out festival-scale operations.",
       "I contributed frontend development and UX across the monorepo — volunteer flows, mobile layouts, feeding calendar interactions, and e2e-testable UI patterns — working in Cursor alongside the Insomnia-IT team.",
     ],
@@ -332,7 +331,6 @@ export const projectsEn: Project[] = [
       "Feed transaction anomalies and exports",
       "Role-based access for festival coordinators",
       "Playwright regression test suite",
-      "Stage: feedapp-dev.insomniafest.ru",
     ],
   },
 ];

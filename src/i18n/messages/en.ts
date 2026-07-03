@@ -219,8 +219,6 @@ export const en = {
     openPlatformArrow: "Open platform ↗",
     openDemo: "Open live demo",
     openDemoArrow: "Open live demo ↗",
-    openStage: "Open stage admin",
-    openStageArrow: "Open stage admin ↗",
     openFullScreen: "Open full screen ↗",
     openNewTab: "Open in new tab →",
     tryBelow: "Try it below ↓",
@@ -268,8 +266,6 @@ export const en = {
       subtitle: "Volunteer & meal operations",
       stackProse:
         "React + Refine + Ant Design on the front, Django REST API on the back. Monorepo with shared packages, Playwright regression tests, and Docker-based local dev — built for a volunteer org running a multi-day outdoor festival.",
-      ctaBody:
-        "Stage admin for Insomnia coordinators — volunteers, feeding, and transactions behind festival login.",
       showcaseIntro:
         "Coordinators work from two screens all festival long: find people in the list, then open a card to plan meals. I focused on making both faster — richer filters on the table, and a feeding calendar that reads arrival dates at a glance.",
     },

@@ -151,7 +151,7 @@ export function ProjectCard({ project, compact = false }: Props) {
                 compact ? "text-xs" : "text-lg sm:text-xl",
               ].join(" ")}
             >
-              Feed
+              {project.title}
             </span>
           </div>
         )}

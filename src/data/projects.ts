@@ -32,7 +32,7 @@ export type Project = {
   summary: string;
   cover: ProjectImage;
   gallery: ProjectImage[];
-  liveUrl: string;
+  liveUrl?: string;
   year: string;
   role: string;
   overview: string[];

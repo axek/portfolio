@@ -61,17 +61,6 @@ export function FeedCaseStudy({ project }: Props) {
               </p>
               <p className="mt-2 text-sm text-white/50">{project.role}</p>
             </div>
-
-            <div className="flex flex-wrap gap-3">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-2.5 text-sm font-medium text-[#041428] transition hover:bg-white/90"
-              >
-                {cs.openStage}
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -176,28 +165,6 @@ export function FeedCaseStudy({ project }: Props) {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section className="mt-20 rounded-3xl bg-[#041428] px-8 py-12 text-center text-white sm:px-12">
-          <Image
-            src="/projects/feed/logo-white.svg"
-            alt=""
-            width={64}
-            height={53}
-            className="mx-auto h-14 w-auto opacity-90"
-            aria-hidden
-          />
-          <p className="mx-auto mt-6 max-w-md text-lg text-white/80">
-            {cs.feed.ctaBody}
-          </p>
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-medium text-[#041428] transition hover:bg-white/90"
-          >
-            {cs.openStageArrow}
-          </a>
         </section>
       </div>
     </article>
