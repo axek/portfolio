@@ -4,6 +4,7 @@ import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { HashScrollHandler } from "@/components/HashScrollHandler";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { asset } from "@/lib/asset";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,8 +24,8 @@ export const metadata: Metadata = {
   },
   description: "Project portfolio with case studies and live product links.",
   icons: {
-    icon: "/axek-logo.png",
-    apple: "/axek-logo.png",
+    icon: asset("/axek-logo.png"),
+    apple: asset("/axek-logo.png"),
   },
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { AssetImage as Image } from "@/components/AssetImage";
 import { useTranslations } from "@/i18n/use-translations";
 
 const DEMO_URL = "https://solant-chi.vercel.app/";

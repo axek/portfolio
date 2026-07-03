@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+import { AssetImage as Image } from "@/components/AssetImage";
+import { asset } from "@/lib/asset";
 import Link from "next/link";
 import { StormyPlatform } from "@/components/projects/StormyPlatform";
 import type { Project } from "@/data/projects";
@@ -67,7 +68,7 @@ export function StormyCaseStudy({ project }: Props) {
               </a>
               {project.brandbookUrl && (
                 <a
-                  href={project.brandbookUrl}
+                  href={asset(project.brandbookUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-2.5 text-sm font-medium text-white transition hover:border-white/50 hover:bg-white/5"

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { AssetImage as Image } from "@/components/AssetImage";
 import Link from "next/link";
 import { FeedShowcase } from "@/components/projects/FeedShowcase";
 import type { Project } from "@/data/projects";

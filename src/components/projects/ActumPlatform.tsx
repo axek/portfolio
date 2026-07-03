@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { AssetImage as Image } from "@/components/AssetImage";
 
 const PLATFORM_URL = "https://glmvp.vercel.app/";
 const BRAND_URL = "https://actum.cx/";
