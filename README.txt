@@ -5,3 +5,8 @@ axek portfolio — Next.js site (EN/RU).
 
 Contact form uses Web3Forms. Copy .env.example to .env.local and set
 NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY before building.
+
+GitHub Pages (https://axek.github.io/portfolio/):
+  - Settings → Pages → Build and deployment → Source: GitHub Actions
+  - Settings → Secrets → NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY (for the contact form)
+  - Push to main triggers .github/workflows/deploy.yml
