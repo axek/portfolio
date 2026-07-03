@@ -22,10 +22,8 @@ export const ru: typeof en = {
     title: "Проекты, продукты и интерфейсы, доставленные клиентам за последние полгода.",
     subtitle:
       "У каждого проекта — своя страница: что это, как выглядит и где посмотреть вживую.",
-    ctaPrimary: "Написать",
-    ctaSecondary: "Смотреть работы",
+    ctaPrimary: "Давай поработаем",
     projectsSrOnly: "Список проектов",
-    mailtoSubject: "Проект",
   },
   background: {
     eyebrow: "Бэкграунд",
@@ -174,6 +172,23 @@ export const ru: typeof en = {
         description: "Полная занятость: дизайн и фронтенд на постоянной основе.",
       },
     ],
+  },
+  contact: {
+    eyebrow: "Контакты",
+    title: "Давай поработаем",
+    subtitle:
+      "Оставьте контакты и коротко опишите задачу — отвечу лично.",
+    nameLabel: "Как вас зовут",
+    namePlaceholder: "Имя или команда",
+    contactLabel: "Как связаться",
+    contactPlaceholder: "email@example.com или Telegram",
+    messageLabel: "О чём речь",
+    messagePlaceholder: "Что нужно сделать, сроки, контекст…",
+    submit: "Отправить",
+    sending: "Отправляем…",
+    success: "Отправлено — скоро отвечу.",
+    error: "Не получилось отправить. Напишите на",
+    notConfigured: "Форма ещё не настроена. Напишите на",
   },
   footer: {
     contact: "Контакты",

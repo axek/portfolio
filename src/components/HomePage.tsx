@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { BackgroundSection } from "@/components/BackgroundSection";
+import { ContactSection } from "@/components/ContactSection";
+import { HashLink } from "@/components/HashLink";
 import { PricingSection } from "@/components/PricingSection";
 import { ProjectCard } from "@/components/ProjectCard";
-import { contact } from "@/data/contact";
 import { getProjects } from "@/data/projects";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { useTranslations } from "@/i18n/use-translations";
@@ -27,19 +27,13 @@ export function HomePage() {
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
             {t.home.subtitle}
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href={`mailto:${contact.email}?subject=${encodeURIComponent(t.home.mailtoSubject)}`}
+          <div className="mt-8">
+            <HashLink
+              href="/#contact"
               className="inline-flex items-center justify-center rounded-full bg-foreground px-7 py-3 text-sm font-medium text-background transition hover:opacity-90"
             >
               {t.home.ctaPrimary}
-            </a>
-            <Link
-              href="/#work"
-              className="inline-flex items-center justify-center rounded-full border border-zinc-300 bg-white px-7 py-3 text-sm font-medium text-foreground transition hover:border-zinc-400 dark:border-zinc-700 dark:bg-zinc-900 dark:hover:border-zinc-600"
-            >
-              {t.home.ctaSecondary}
-            </Link>
+            </HashLink>
           </div>
         </div>
       </section>
@@ -58,6 +52,8 @@ export function HomePage() {
       <BackgroundSection />
 
       <PricingSection />
+
+      <ContactSection />
     </div>
   );
 }

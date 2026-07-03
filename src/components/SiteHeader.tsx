@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { AxekLogo } from "@/components/AxekLogo";
+import { HashLink } from "@/components/HashLink";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useTranslations } from "@/i18n/use-translations";
 
@@ -33,9 +34,9 @@ export function SiteHeader() {
           <div className="flex items-center gap-4 sm:gap-6">
             <nav className="hidden items-center gap-4 text-sm text-zinc-600 sm:flex sm:gap-6 dark:text-zinc-400">
               {links.map((link) => (
-                <Link key={link.href} href={link.href} className={navLinkClass}>
+                <HashLink key={link.href} href={link.href} className={navLinkClass}>
                   {link.label}
-                </Link>
+                </HashLink>
               ))}
             </nav>
             <LanguageSwitcher />
@@ -49,9 +50,9 @@ export function SiteHeader() {
       >
         <div className="mx-auto flex max-w-6xl gap-5 overflow-x-auto px-4 py-3 text-sm text-zinc-600 [-ms-overflow-style:none] [scrollbar-width:none] dark:text-zinc-400 [&::-webkit-scrollbar]:hidden">
           {links.map((link) => (
-            <Link key={link.href} href={link.href} className={navLinkClass}>
+            <HashLink key={link.href} href={link.href} className={navLinkClass}>
               {link.label}
-            </Link>
+            </HashLink>
           ))}
         </div>
       </nav>

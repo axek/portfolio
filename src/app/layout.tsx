@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
+import { HashScrollHandler } from "@/components/HashScrollHandler";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import "./globals.css";
@@ -40,6 +41,7 @@ export default function RootLayout({
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <LanguageProvider>
+          <HashScrollHandler />
           <SiteHeader />
           {children}
           <SiteFooter />

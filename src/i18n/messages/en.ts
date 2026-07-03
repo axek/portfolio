@@ -20,10 +20,8 @@ export const en = {
     title: "Projects, products, and interfaces I have shipped.",
     subtitle:
       "Each project opens a detailed view with previews, copy, and a link to the live product.",
-    ctaPrimary: "Get in touch",
-    ctaSecondary: "View work",
+    ctaPrimary: "Let's work together",
     projectsSrOnly: "Project list",
-    mailtoSubject: "Project inquiry",
   },
   background: {
     eyebrow: "Background",
@@ -175,6 +173,23 @@ export const en = {
           "Dedicated capacity — design and front-end development full-time.",
       },
     ],
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Let's work together",
+    subtitle:
+      "Leave your contacts and a short brief — I'll reply personally.",
+    nameLabel: "Your name",
+    namePlaceholder: "Name or team",
+    contactLabel: "How to reach you",
+    contactPlaceholder: "email@example.com or Telegram",
+    messageLabel: "What you need",
+    messagePlaceholder: "What to build, timeline, context…",
+    submit: "Send",
+    sending: "Sending…",
+    success: "Sent — I'll get back to you soon.",
+    error: "Couldn't send. Email me at",
+    notConfigured: "Form isn't set up yet. Email me at",
   },
   footer: {
     contact: "Contact",
